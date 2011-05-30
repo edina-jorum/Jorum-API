@@ -1,0 +1,14 @@
+##############################
+# Build properties
+##############################
+
+// Full pathname of Grails installation
+grails.home=GRAILS_HOME
+
+// Environment in which API should run:
+// production, development or test
+grails.env=GRAILS_ENV
+
+// Java options to pass to embedded Tomcat container, for example:
+// java_opts= -Dname=jorumapi -server -Xms1G -Xmx1G -XX:MaxPermSize=192m -Dfile.encoding=UTF-8
+java_opts= JAVA_OPTS

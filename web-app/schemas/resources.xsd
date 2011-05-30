@@ -1,0 +1,57 @@
+<!--
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ *
+ *  University Of Edinburgh (EDINA) 
+ *  Scotland
+ *
+ *
+ *  File Name           : resources.xsd
+ *  Author              : ianfieldhouse
+ *  Approver            : Ian Fieldhouse 
+ * 
+ *  Notes               :
+ *
+ *
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ */
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.jorum.ac.uk/" 
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	elementFormDefault="unqualified">
+	
+	<xsd:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/2006/01/06/dc.xsd" />
+	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/2006/01/06/dcterms.xsd" />
+	
+	<xsd:element name="resources">
+		<xsd:complexType>
+			<xsd:sequence>
+				
+				<xsd:element name="total" type="xsd:integer" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="limit" type="xsd:integer" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="sort" type="xsd:string" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="offset" type="xsd:integer" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="next_offset" type="xsd:integer" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="previous_offset" type="xsd:integer" minOccurs="0" maxOccurs="1" />
+				
+				<xsd:element name="resource_record" maxOccurs="unbounded">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="id" type="xsd:string"/>
+							<xsd:element ref="dc:title"/>
+							<xsd:element ref="dc:description"/>
+							<xsd:element ref="dc:identifier" maxOccurs="unbounded" />
+							<xsd:element ref="dc:contributor" maxOccurs="unbounded" />
+							<xsd:element ref="dc:subject"  maxOccurs="unbounded"/>
+							<xsd:element ref="dc:rights"  maxOccurs="unbounded"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,30 @@
+// Port from which the API should run using http
+grails.server.port.http=PORT_NUMBER
+
+// Port from which the API should run using https
+grails.server.port.https=PORT_NUMBER
+
+grails.server.host=null
+
+// Name of API application, for example:
+// "Jorum API"
+grails.app.name="APP_NAME"
+
+// Context that the API application should use, for example:
+// "v0p3"
+grails.app.context="APP_CONTEXT"
+
+// Server URL of API application, for example:
+// "http://api.jorum.ac.uk:${grails.server.port.http}/"
+grails.serverURL="http://HOSTNAME:${grails.server.port.http}/"
+
+// Full url of local install of DSpace's XMLUI, for example:
+// http://resources.jorum.ac.uk/xmlui
+dspace.url="DSPACE_XMLUI_URL"
+
+// Default limits for search results
+results.default=50
+results.limit=250
+
+// Google analytics code for use with JGoogleAnalytics code
+google.analytics.webPropertyID = "GOOGLE_ANALYTICS_CODE"
